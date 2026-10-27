@@ -1,0 +1,8 @@
+services:
+  botai:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./config/agents.yaml:/app/config/agents.yaml:ro
+      - ./data:/app/data

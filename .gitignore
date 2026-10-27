@@ -1,0 +1,11 @@
+# Bí mật & dữ liệu chạy thật — KHÔNG commit
+.env
+config/agents.yaml
+data/*
+!data/.gitkeep
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
