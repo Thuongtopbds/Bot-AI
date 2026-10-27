@@ -1,0 +1,15 @@
+[Unit]
+Description=Bot AI - doi tro ly Telegram
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=botai
+WorkingDirectory=/opt/bot-ai
+ExecStart=/opt/bot-ai/.venv/bin/python -m botai
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
